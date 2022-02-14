@@ -3,7 +3,7 @@ from time import sleep
 
 def main():
     camera_i = camera.get_camera() #DO NOT MODIFY, function call must work as is 
-    ##sense = sensehat.get_sensehat() #DO NOT MODIFY, function call must work as is 
+    sense = sensehat.get_sensehat() #DO NOT MODIFY, function call must work as is 
     
     userinput = input("Enter '2' to take the background image else press different key")
     take_background_image=False
@@ -39,7 +39,7 @@ def main():
             person_detected = computer_vision.person_detected("data/images/background.jpg","data/images/image%s.jpg" % count, t1)  #DO NOT MODIFY, function call must work as is 
             if person_detected: #DO NOT MODIFY, function call must work as is 
                 print("Person Detected") #DO NOT MODIFY, function call must work as is 
-                ##sensehat.alarm(sense,interval)  #DO NOT MODIFY, function call must work as is 
+                sensehat.alarm(sense,interval)  #DO NOT MODIFY, function call must work as is 
             else:
                 print("No Person Detected") #DO NOT MODIFY, function call must work as is 
             count += 1
