@@ -11,6 +11,7 @@ def person_detected(image1_file, image2_file, t1):
     a3=a2-a1
     a3=np.absolute(a3)
     total = np.sum(a3)
+    
     if total>t1:
         return True
     return False
